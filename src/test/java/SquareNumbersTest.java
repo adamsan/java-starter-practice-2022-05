@@ -24,4 +24,18 @@ class SquareNumbersTest {
         int[] expected = {};
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    void testCalculationForPositiveInput() {
+        int result = SquareNumbers.calculate(5);
+        int expected = 25;
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void testCalculationForNegativeInput() {
+        int result = SquareNumbers.calculate(-5);
+        int expected = 0;
+        assertEquals(expected, result);
+    }
 }

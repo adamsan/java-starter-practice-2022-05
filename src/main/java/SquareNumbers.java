@@ -9,13 +9,9 @@ public class SquareNumbers {
     public static void main(String[] args) {
         int[] numbers = range(-3, 4);
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0) {
-                int x = 0;
-                System.out.println(numbers[i] + " -> " + x);
-            } else {
-                int x = numbers[i] * numbers[i];
-                System.out.println(numbers[i] + " -> " + x);
-            }
+            int x = numbers[i];
+            int y = calculate(x);
+            System.out.println(x + " -> " + y);
         }
     }
 
@@ -30,5 +26,11 @@ public class SquareNumbers {
             result[i] = i + start;
         }
         return result;
+    }
+
+    public static int calculate(int i) {
+        if (i < 0) return 0;
+        else return i * i;
+//        return (i < 0) ? 0 : i * i;
     }
 }

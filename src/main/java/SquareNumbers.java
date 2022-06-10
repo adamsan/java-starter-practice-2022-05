@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Square of positives
  * <p>
@@ -7,7 +9,11 @@
  */
 public class SquareNumbers {
     public static void main(String[] args) {
-        int[] numbers = range(-3, 4);
+//        System.out.println(Arrays.toString(args));
+        int start = Integer.parseInt(args[0]);
+        int end = Integer.parseInt(args[1]);
+
+        int[] numbers = range(start, end);
         for (int i = 0; i < numbers.length; i++) {
             int x = numbers[i];
             int y = calculate(x);
